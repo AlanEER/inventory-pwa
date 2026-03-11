@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Inventory</title>
+
+<link rel="stylesheet" href="css/stylesheet.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<h1>Inventory Registration</h1>
+<div id="status-online" class="status"></div>
+<form id="form-producto">
+    
+    <input 
+        type="text"
+        id="nombre-producto"
+        placeholder="Product Name"
+        required
+    >
+
+    <input 
+        type="number"
+        id="cantidad-producto"
+        placeholder="Quantity"
+        required
+    >
+
+    <button type="submit">Save</button>
+
+</form>
+
+<h2>Registered Products</h2>
+<ul id="lista-productos"></ul>
+
+<script src="db.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

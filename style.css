@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: blanchedalmond;
+
+}
+
+.app-shell-header{
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+#app-content{
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0
+}
+
+li{
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba((0), 0, 0, 0.1);
+}
+
+.loading{
+    text-align: center;
+    color: black;
+    font-style: italic;
+}
