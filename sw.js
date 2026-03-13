@@ -15,30 +15,22 @@ self.addEventListener("install", event => {
     console.log("Service Worker Installed");
 
     event.waitUntil(
-
         caches.open(CACHE_NAME)
         .then(cache => {
-
             return cache.addAll(FILES_TO_CACHE);
-
         })
-
-    );
-
-});
+    )
+})
 
 // ACTIVATE
 
 self.addEventListener("activate", () => {
-
     console.log("Service Worker Active");
-
 });
 
 // FETCH (CACHE FIRST)
 
 self.addEventListener("fetch", event => {
-
     event.respondWith(
 
         caches.match(event.request)
@@ -47,14 +39,10 @@ self.addEventListener("fetch", event => {
             if(response){
                 return response;
             }
-
             return fetch(event.request);
-
         })
-
-    );
-
-});
+    )
+})
 
 //cambiar style.ccs -> style_2.css (colores diferentes) - linea 17 - inyectar el otro style para que lo sobreescriba
 

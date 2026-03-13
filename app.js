@@ -16,15 +16,30 @@ if ("serviceWorker" in navigator) {
 
 const statusDiv = document.getElementById("status-online");
 
-window.addEventListener("online", () => {
-    statusDiv.textContent = "Online";
-    statusDiv.className = "status online";
-});
+function actualizarEstado() {
+    if (navigator.onLine) {
+        statusDiv.textContent = "Online";
+        statusDiv.className = "status online";
+    } else {
+        statusDiv.textContent = "Offline Mode";
+        statusDiv.className = "status offline";
+    }
+}
 
-window.addEventListener("offline", () => {
-    statusDiv.textContent = "Offline Mode";
-    statusDiv.className = "status offline";
-});
+window.addEventListener("load", actualizarEstado);
+window.addEventListener("online", actualizarEstado);
+window.addEventListener("offline", actualizarEstado);
+
+
+// window.addEventListener("online", () => {
+//     statusDiv.textContent = "Online";
+//     statusDiv.className = "status online";
+// });
+
+// window.addEventListener("offline", () => {
+//     statusDiv.textContent = "Offline Mode";
+//     statusDiv.className = "status offline";
+// });
 
 // FORM
 
